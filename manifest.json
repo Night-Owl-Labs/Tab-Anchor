@@ -1,8 +1,8 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 3,
   "name": "Tab Anchor",
   "version": "1.0.0",
-  "description": "AAlways open new tabs on the monitor you choose. Anchor a window, reuse it for pop-ups/hyperlinks, and improve your multi-monitor workflow.",
+  "description": "Anchor new tabs and hyperlinks to a fixed window area on any monitor for consistent placement.",
   "permissions": [
     "storage",
     "tabs",
