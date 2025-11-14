@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Anchor",
+  "version": "1.0.0",
+  "description": "Anchor an area on any monitor and keep new tabs/pop-ups anchored there. Hyperlinks-only mode + reuse/new-window toggle.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "windows",
+    "webNavigation",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "src/js/background.js"
+  },
+  "action": {
+    "default_title": "Tab Anchor",
+    "default_popup": "src/html/popup.html"
+  },
+  "options_page": "src/html/options.html",
+  "icons": {
+    "16": "src/icons/icon16.png",
+    "48": "src/icons/icon48.png",
+    "128": "src/icons/icon128.png"
+  }
+}

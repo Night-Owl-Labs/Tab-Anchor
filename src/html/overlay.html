@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Anchor Area</title>
+    <style>
+      html, body { height: 100%; margin: 0; }
+      body {
+        box-sizing: border-box;
+        display: flex; align-items: center; justify-content: center;
+        border: 6px dashed #5daeff;
+        background: rgba(0, 0, 0, 0.85);
+        color: #ffffff;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      .bubble {
+        background: #1e1e1e;
+        padding: 18px 20px;
+        border-radius: 12px;
+        border: 1px solid #5daeff;
+        color: #5daeff;
+        font-weight: 600;
+        box-shadow: 0 0 24px rgba(93, 174, 255, 0.4);
+        display: flex; flex-direction: column; align-items: center; gap: 12px;
+        max-width: 90vw;
+      }
+      .logo { width: min(260px, 60vw); height: auto; display: block; }
+      .title { margin: 0; color: #5daeff; font-weight: 700; }
+      .coords-wrap { width: 100%; color: #b9d7ff; font-weight: 500; }
+      .code {
+        margin: 6px 0 0 0; background: #0f0f10; color: #d8ecff;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px; line-height: 1.4; padding: 8px 10px; border-radius: 8px;
+        border: 1px solid #2a2f33; white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bubble">
+      <img id="anchorLogo" class="logo" alt="Tab Anchor logo" />
+      <h3 class="title">This is your tab <strong>Anchor</strong> area</h3>
+      <div class="coords-wrap">
+        <div>Your anchor is currently dropped at the following coordinates:</div>
+        <pre id="bounds" class="code">Loading…</pre>
+      </div>
+    </div>
+    <script src="../js/overlay.js"></script>
+  </body>
+</html>

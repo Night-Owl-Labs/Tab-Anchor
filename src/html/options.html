@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tab Anchor – Options</title>
+    <style>
+      :root{
+        --bg: #1e1e1e;
+        --panel: #121212;
+        --text: #ffffff;
+        --muted: #cccccc;
+        --blue: #5daeff;
+        --border: #2c2c2c;
+        --btn-bg: #000000;
+      }
+
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--blue);
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .help {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 0 0 8px 0;
+      }
+
+      .row {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]{
+        width: 18px; height: 18px;
+        accent-color: var(--blue);
+      }
+
+      .btns{
+        display: flex; flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      button, .link-btn {
+        background-color: var(--btn-bg);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 10px 12px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: background .2s, border-color .2s, transform .04s;
+      }
+      button:hover, .link-btn:hover { background: #111111; border-color: var(--blue); }
+      button:active, .link-btn:active { transform: translateY(1px); }
+
+      .code {
+        margin: 0;
+        background: #0f0f10;
+        color: #d8ecff;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        line-height: 1.4;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #2a2f33;
+        white-space: pre-wrap;
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--border);
+        border: none;
+        margin: 6px 0 2px;
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .footer-logo {
+        width: 64px;
+        height: auto;
+        margin: 0 auto 4px auto;
+        display: block;
+        filter: drop-shadow(0 0 8px rgba(93, 174, 255, 0.5));
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .hint {
+        color: #cccccc;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .copyright {
+        color: #666;
+        font-size: 11px;
+        align-self: center;
+        margin-top: 4px;
+      }
+
+      #reset {
+        background: #FF0000 !important;
+        color: #FFFFFF !important;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Tab Anchor</h1>
+
+    <p class="help">
+      Move this page to the monitor you want to use, resize the window to the desired size/position,
+      then click <strong>Anchor tabs here</strong>.
+    </p>
+
+    <div class="row">
+      <div class="btns">
+        <button id="useCurrent">Anchor tabs here</button>
+        <button id="showBounds">Show anchor area</button>
+        <button id="reset">Clear dropped anchor</button>
+      </div>
+      <div class="help">
+        <strong>Anchor tabs here</strong> saves this window’s bounds; new links/tabs are routed there based on your settings.
+      </div>
+    </div>
+
+    <div class="row">
+      <label title="When ON, add new tabs to an existing window on the anchor monitor (if one exists); otherwise create one.">
+        <input type="checkbox" id="reuseExisting" />
+        Reuse existing windows for anchor points (recommended)
+      </label>
+
+      <label title="When ON, the tab that was moved/created on the anchor monitor becomes the active tab and the window is focused.">
+        <input type="checkbox" id="focusMoved" checked />
+        Switch to moved tab (focus anchor window)
+      </label>
+
+      <label title="When ON, only links/pop-ups (target=_blank, window.open) are moved. Manual New Tab / Duplicates stay put.">
+        <input type="checkbox" id="hyperlinksOnly" checked />
+        Hyperlinks only (don’t move manual/duplicated new tabs)
+      </label>
+    </div>
+
+    <div class="row">
+      <div>Your anchor is currently dropped at the following coordinates:</div>
+      <pre id="bounds" class="code">None</pre>
+    </div>
+
+    <div class="row">
+      <div class="help">
+        Tip: Right-click any link → <em>“Open Link in Current Window (Ignore Anchor)”</em> to bypass your anchor rules for that link.
+      </div>
+    </div>
+
+    <!-- Footer / About -->
+    <div class="row footer">
+
+      <div class="footer-links">
+        <div class="hint">Browse the open source code and contribute on GitHub:</div>
+        <a class="link-btn" href="https://github.com/Night-Owl-Labs/Tab-Anchor" target="_blank" rel="noopener noreferrer">View Source</a>
+
+        <div class="hint">Like the project? Support development and keep the coffee flowing:</div>
+        <a class="link-btn" href="https://www.buymeacoffee.com/scottgriv" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>
+
+        <div class="hint">Visit the creator’s website and explore other Night Owl Labs projects:</div>
+        <a class="link-btn" href="https://nightowllabs.io" target="_blank" rel="noopener noreferrer">Night Owl Labs</a>
+      </div>
+
+      <img src="../icons/anchor.png" alt="Tab Anchor logo" class="footer-logo" />
+
+      <div class="copyright">
+        Copyright © <span id="year"></span> Night Owl Labs, LLC.
+      </div>
+    </div>
+
+    <script src="../js/options.js"></script>
+  </body>
+</html>

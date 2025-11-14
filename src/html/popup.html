@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tab Anchor</title>
+    <style>
+      body {
+        background-color: #1e1e1e; /* dark gray background */
+        color: #ffffff; /* white text */
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        margin: 16px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      h3 {
+        margin-top: 0;
+        text-align: center;
+        color: #5daeff; /* rich blue accent */
+      }
+
+      button {
+        background-color: #000000; /* black buttons */
+        color: #ffffff;
+        border: 1px solid #3a3a3a;
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.2s, border-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #111111;
+        border-color: #5daeff;
+      }
+
+      .desc {
+        font-size: 12px;
+        color: #cccccc;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+
+      .divider {
+        height: 1px;
+        background: #2c2c2c;
+        margin: 12px 0;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Tab Anchor</h3>
+
+    <button id="useCurrent">Anchor tabs here</button>
+    <div class="desc">
+      Save this monitor’s position — new tabs and pop-ups will anchor here automatically.
+    </div>
+
+    <button id="showBounds">Show anchor area</button>
+    <div class="desc">
+      Preview where your anchored area is — a blue dashed outline popup will appear; close when finished.
+    </div>
+
+    <hr class="divider" />
+
+    <button id="openOptions">Open options</button>
+    <div class="desc">
+      Adjust advanced settings like reuse behavior, hyperlink mode, and anchor visibility.
+    </div>
+
+    <script src="../js/popup.js"></script>
+  </body>
+</html>
