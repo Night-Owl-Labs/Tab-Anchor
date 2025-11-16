@@ -1,26 +1,35 @@
 // Tab Anchor v1.0.0
 // Storage keys
-const KEY_TARGET_BOUNDS   = "targetBounds";      // { left, top, width, height }
-const KEY_REUSE_EXISTING  = "reuseExisting";     // boolean
-const KEY_ANCHOR_WINDOW_ID= "anchorWindowId";    // persistent window id when reusing
-const KEY_HYPERLINKS_ONLY = "hyperlinksOnly";    // boolean (default true)
-const KEY_FOCUS_MOVED     = "focusMoved";        // focus moved/created tab (default true)
+const KEY_TARGET_BOUNDS = "targetBounds"; // { left, top, width, height }
+const KEY_REUSE_EXISTING = "reuseExisting"; // boolean
+const KEY_ANCHOR_WINDOW_ID = "anchorWindowId"; // persistent window id when reusing
+const KEY_HYPERLINKS_ONLY = "hyperlinksOnly"; // boolean (default true)
+const KEY_FOCUS_MOVED = "focusMoved"; // focus moved/created tab (default true)
 
 // In-session ignore list for context-menu opens
 const sessionIgnore = new Set();
 
 async function getSettings() {
   const {
-    targetBounds, reuseExisting, anchorWindowId,
-    hyperlinksOnly, focusMoved
+    targetBounds,
+    reuseExisting,
+    anchorWindowId,
+    hyperlinksOnly,
+    focusMoved,
   } = await chrome.storage.local.get({
     targetBounds: null,
     reuseExisting: true,
     anchorWindowId: null,
     hyperlinksOnly: true,
-    focusMoved: true
+    focusMoved: true,
   });
-  return { targetBounds, reuseExisting, anchorWindowId, hyperlinksOnly, focusMoved };
+  return {
+    targetBounds,
+    reuseExisting,
+    anchorWindowId,
+    hyperlinksOnly,
+    focusMoved,
+  };
 }
 
 async function setSettings(update) {
@@ -48,11 +57,11 @@ async function getOrCreateAnchorWindow(targetBounds, forceNew = false) {
   // Create a brand-new anchor window pinned to the saved bounds
   const created = await chrome.windows.create({
     url: "chrome://newtab",
-    left:   targetBounds.left,
-    top:    targetBounds.top,
-    width:  targetBounds.width,
+    left: targetBounds.left,
+    top: targetBounds.top,
+    width: targetBounds.width,
     height: targetBounds.height,
-    focused: true
+    focused: true,
   });
 
   await setSettings({ anchorWindowId: created.id });
@@ -68,7 +77,10 @@ async function focusTabAndWindow(winId, tabId) {
       await chrome.tabs.update(tabId, { active: true });
     }
     if (Number.isInteger(winId)) {
-      await chrome.windows.update(winId, { focused: true, drawAttention: false });
+      await chrome.windows.update(winId, {
+        focused: true,
+        drawAttention: false,
+      });
     }
   } catch {}
 }
@@ -91,32 +103,32 @@ async function placeTabAccordingToMode(tabId, url = null) {
       if (url && Number.isInteger(tabId)) {
         const w = await chrome.windows.create({
           tabId,
-          left:   targetBounds.left,
-          top:    targetBounds.top,
-          width:  targetBounds.width,
+          left: targetBounds.left,
+          top: targetBounds.top,
+          width: targetBounds.width,
           height: targetBounds.height,
-          focused: true
+          focused: true,
         });
         await chrome.tabs.update(tabId, { url });
         await focusTabAndWindow(w.id, tabId);
       } else if (Number.isInteger(tabId)) {
         const w = await chrome.windows.create({
           tabId,
-          left:   targetBounds.left,
-          top:    targetBounds.top,
-          width:  targetBounds.width,
+          left: targetBounds.left,
+          top: targetBounds.top,
+          width: targetBounds.width,
           height: targetBounds.height,
-          focused: true
+          focused: true,
         });
         await focusTabAndWindow(w.id, tabId);
       } else if (url) {
         const w = await chrome.windows.create({
           url,
-          left:   targetBounds.left,
-          top:    targetBounds.top,
-          width:  targetBounds.width,
+          left: targetBounds.left,
+          top: targetBounds.top,
+          width: targetBounds.width,
           height: targetBounds.height,
-          focused: true
+          focused: true,
         });
         // Active tab is already focused in the new window
       }
@@ -129,18 +141,19 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "openInCurrentWindowIgnoreAnchor",
     title: "Open Link in Current Window (Ignore Anchor)",
-    contexts: ["link"]
+    contexts: ["link"],
   });
 });
 
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId !== "openInCurrentWindowIgnoreAnchor" || !info.linkUrl) return;
+  if (info.menuItemId !== "openInCurrentWindowIgnoreAnchor" || !info.linkUrl)
+    return;
   if (!tab || typeof tab.windowId !== "number") return;
 
   const created = await chrome.tabs.create({
     windowId: tab.windowId,
     url: info.linkUrl,
-    active: true
+    active: true,
   });
   if (created && typeof created.id === "number") {
     sessionIgnore.add(created.id);
@@ -184,11 +197,11 @@ chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
       await chrome.windows.create({
         url: chrome.runtime.getURL("src/html/overlay.html"),
         type: "popup",
-        left:   targetBounds.left,
-        top:    targetBounds.top,
-        width:  Math.max(200, targetBounds.width),
+        left: targetBounds.left,
+        top: targetBounds.top,
+        width: Math.max(200, targetBounds.width),
         height: Math.max(150, targetBounds.height),
-        focused: true
+        focused: true,
       });
       sendResponse({ ok: true });
     } catch (e) {

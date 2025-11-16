@@ -12,21 +12,20 @@ useCurrentBtn.addEventListener("click", async () => {
     alert("Could not read window position on this platform.");
     return;
   }
+
   const targetBounds = {
     left: w.left,
     top: w.top,
     width: w.width || 1200,
-    height: w.height || 800
+    height: w.height || 800,
   };
+
   await chrome.storage.local.set({
     [KEY_TARGET_BOUNDS]: targetBounds,
-    [KEY_ANCHOR_WINDOW_ID]: null
+    [KEY_ANCHOR_WINDOW_ID]: w.id, // ✅ store anchor window id here too
   });
 
-  alert(
-    "Anchor dropped!\n\n" +
-    "Links and pop-ups will now be opened here."
-  );
+  alert("Anchor dropped!\n\n" + "Links and pop-ups will now be opened here.");
 });
 
 // Open full options page
@@ -37,12 +36,14 @@ openOptionsBtn.addEventListener("click", async () => {
 // Show anchor area overlay (same as Options “Show anchor area”)
 showBoundsBtn.addEventListener("click", async () => {
   // 1) Check locally first
-  const { targetBounds } = await chrome.storage.local.get({ targetBounds: null });
+  const { targetBounds } = await chrome.storage.local.get({
+    targetBounds: null,
+  });
 
   if (!targetBounds) {
     alert(
       "No anchor has been dropped yet.\n\n" +
-      'Open the window on the monitor you want new tabs to appear on, then click “Anchor tabs here.”'
+        "Open the window on the monitor you want new tabs to appear on, then click “Anchor tabs here.”"
     );
     return;
   }
@@ -55,5 +56,3 @@ showBoundsBtn.addEventListener("click", async () => {
     console.warn("Failed showing bounds:", msg);
   }
 });
-
-
