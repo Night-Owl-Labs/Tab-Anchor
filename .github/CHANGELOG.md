@@ -8,7 +8,7 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## [1.0.0] – 2025-11-13
+## [1.0.0] – 2025-11-16
 
 ### Added
 - Initial public release of **Tab Anchor**.
