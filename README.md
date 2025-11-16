@@ -9,6 +9,20 @@ Whether you work across multiple monitors or keep certain tabs in a fixed worksp
 
 _It’s perfect for developers, multitaskers, traders, and anyone who wants consistent tab placement across multiple screens._
 
+<div align="center">
+    <img src="./docs/images/demo_screenshot_1.png" style="width: 50%;"/>
+    <br>
+    <i>Always open tabs in the menu and monitor you want</i>
+</div>
+
+<br />
+
+<div align="center">
+    <img src="./docs/images/demo_screenshot_2.png" style="width: 50%;"/>
+    <br>
+    <i>Set options to fit your workflow</i>
+</div>
+
 ---
 
 ## Table of Contents
