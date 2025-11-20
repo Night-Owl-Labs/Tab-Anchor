@@ -15,7 +15,7 @@ This file is used to connect this repository to the **PRG** project categorizati
 **Repository Tier:** Silver <br>
 **Technology:** HTML, CSS, JavaScript <br>
 **Category:** Google Chrome, Chrome Extension, Chrome Web Store <br>
-**Order:** 26 <br>
+**Order:** 13 <br>
 
 ## Parameters
 
