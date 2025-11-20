@@ -1,11 +1,32 @@
-<div align="center"> <a href="https://github.com/Night-Owl-Labs/Tab-Anchor" target="_blank">
-    <img src="./docs/images/anchor.png" width="275" height="275"/></a>
+<div align="center">
+    <a href="https://chromewebstore.google.com/detail/heandnaaoakojdkoomhklpcmikikbbej" target="_blank">
+        <img src="./docs/images/banner_large.png" /> <!-- Add a specific width/height for your icon here, ex. width="150" height="150"-->
+    </a>
 </div>
+<br>
+<p align="center">
+    <a href="https://www.google.com/chrome"><img src="https://img.shields.io/badge/Google-Chrome-4285F4?style=for-the-badge&logo=googlechrome" alt="Google Chrome Badge" /></a>
+    <a href="https://chromewebstore.google.com"><img src="https://img.shields.io/badge/Chrome-Web_Store-4285F4?style=for-the-badge&logo=chromewebstore" alt="Chrome Web Store Badge" /></a>
+    <br>
+    <a href="https://www.javascript.com/"><img src="https://img.shields.io/badge/JavaScript-ES13-F7DF1E?style=for-the-badge&logo=javascript" alt="JavaScript Badge" /></a>
+    <a href="https://www.w3schools.com/html/"><img src="https://img.shields.io/badge/HTML-5-E34F26?style=for-the-badge&logo=html5" alt="HTML Badge" /></a>
+    <a href="https://www.w3schools.com/css/)"><img src="https://img.shields.io/badge/CSS-3-1572B6?style=for-the-badge&logo=css3" alt="CSS Badge" /></a>
+    <br>
+    <a href="https://github.com/Night-Owl-Labs"><img src="https://img.shields.io/badge/github-follow_us-181717?style=for-the-badge&logo=github&color=181717" alt="GitHub Badge" /></a>
+    <a href="https://x.com/Night_Owl_Labs"><img src="https://img.shields.io/badge/email-follow_us-white?style=for-the-badge&logo=x" alt="X Badge" /></a>
+    <a href="mailto:support@nightowllabs.io"><img src="https://img.shields.io/badge/gmail-contact_us-EA4335?style=for-the-badge&logo=gmail" alt="Email Badge" /></a>
+    <br>
+    <a href="https://prgportfolio.com" target="_blank"><img src="https://img.shields.io/badge/PRG-Silver Project-C0C0C0?style=for-the-badge&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMjYuMDAwMDAwcHQiIGhlaWdodD0iMzQuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAyNi4wMDAwMDAgMzQuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwzNC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNDMEMwQzAiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0xMiAzMjggYy04IC04IC0xMiAtNTEgLTEyIC0xMzUgMCAtMTA5IDIgLTEyNSAxOSAtMTQwIDQyIC0zOCA0OAotNDIgNTkgLTMxIDcgNyAxNyA2IDMxIC0xIDEzIC03IDIxIC04IDIxIC0yIDAgNiAyOCAxMSA2MyAxMyBsNjIgMyAwIDE1MCAwCjE1MCAtMTE1IDMgYy04MSAyIC0xMTkgLTEgLTEyOCAtMTB6IG0xMDIgLTc0IGMtNiAtMzMgLTUgLTM2IDE3IC0zMiAxOCAyIDIzCjggMjEgMjUgLTMgMjQgMTUgNDAgMzAgMjUgMTQgLTE0IC0xNyAtNTkgLTQ4IC02NiAtMjAgLTUgLTIzIC0xMSAtMTggLTMyIDYKLTIxIDMgLTI1IC0xMSAtMjIgLTE2IDIgLTE4IDEzIC0xOCA2NiAxIDc3IDAgNzIgMTggNzIgMTMgMCAxNSAtNyA5IC0zNnoKbTExNiAtMTY5IGMwIC0yMyAtMyAtMjUgLTQ5IC0yNSAtNDAgMCAtNTAgMyAtNTQgMjAgLTMgMTQgLTE0IDIwIC0zMiAyMCAtMTgKMCAtMjkgLTYgLTMyIC0yMCAtNyAtMjUgLTIzIC0yNiAtMjMgLTIgMCAyOSA4IDMyIDEwMiAzMiA4NyAwIDg4IDAgODggLTI1eiIvPgo8L2c+Cjwvc3ZnPgo=" alt="Silver" /></a>
+</p>
+
+---------------
 
 <h1 align="center">Tab Anchor</h1>
 
 **Tab Anchor** is a [Google Chrome Extension](https://developer.chrome.com/docs/extensions) that lets you _anchor_ a specific monitor and window region so that **all new tabs and pop-ups automatically open there**.  
 Whether you work across multiple monitors or keep certain tabs in a fixed workspace, Tab Anchor makes tab organization effortless.
+
+Download it today from the [Chrome Web Store](https://chrome.google.com/webstore/detail/tab-anchor/heandnaaoakojdkoomhklpcmikikbbej)!
 
 _It’s perfect for developers, multitaskers, traders, and anyone who wants consistent tab placement across multiple screens._
 
@@ -35,9 +56,9 @@ _It’s perfect for developers, multitaskers, traders, and anyone who wants cons
 - [Context Menu](#context-menu)
 - [Overlay Preview](#overlay-preview)
 - [Changelog](#changelog)
-- [Credits](#credits)
-- [Links](#links)
+- [Resources](#resources)
 - [License](#license)
+- [Credits](#credits)
 
 ## Features
 
@@ -151,24 +172,31 @@ Useful for verifying your anchor placement.
 See the full changelog:  
 📄 **[CHANGELOG](.github/CHANGELOG.md)**
 
-## Credits
+## Resources
 
-Created by **Night Owl Labs, LLC**  
-Designed & engineered by **Scott Grivner**
-
-## Links
-
-- 🌙 **Night Owl Labs:** https://nightowllabs.io
-- 💻 **GitHub Repo:** https://github.com/Night-Owl-Labs/Tab-Anchor
-- ☕ **Buy Me a Coffee:** https://www.buymeacoffee.com/scottgriv
+- [Google Chrome](https://www.google.com/chrome/)
+- [Chrome Extensions Documentation](https://developer.chrome.com/docs/extensions/)
+- [Chrome Web Store](https://chrome.google.com/webstore/category/extensions)
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is released under the terms of the **MIT License**, which permits use, modification, and distribution of the code, subject to the conditions outlined in the license.
+- The [MIT License](https://choosealicense.com/licenses/mit/) provides certain freedoms while preserving rights of attribution to the original creators.
+- For more details, see the [LICENSE](LICENSE) file in this repository. in this repository.
 
-<br />
+## Credits
+
+**Author:** [Night Owl Labs, LLC.](https://github.com/Night-Owl-Labs) <br>
+**Email:** [support@nightowllabs.io](mailto:support@nightowllabs.io) <br>
+**Website:** [nightowllabs.io](https://www.nightowllabs.io) <br>
+**Reference:** [Main Branch](https://github.com/Night-Owl-Labs/Software-ilities) <br>
+
+---------------
+
 <div align="center">
     <a href="https://nightowllabs.io" target="_blank">
         <img src="./docs/images/footer.png" width="100" height="100"/>
     </a>
 </div>
+
+<!-- End README -->
