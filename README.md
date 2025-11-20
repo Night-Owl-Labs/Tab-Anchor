@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://chromewebstore.google.com/detail/heandnaaoakojdkoomhklpcmikikbbej" target="_blank">
-        <img src="./docs/images/banner_large.png" /> <!-- Add a specific width/height for your icon here, ex. width="150" height="150"-->
+        <img src="./docs/images/banner_large.png" />
     </a>
 </div>
 <br>
