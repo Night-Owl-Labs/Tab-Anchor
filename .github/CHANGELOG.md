@@ -1,12 +1,9 @@
 # Changelog
 
-All notable changes to **Tab Anchor** will be documented in this file.
+All notable changes to this project will be documented in this file.
 
-The format follows the guidelines of  
-[Keep a Changelog](https://keepachangelog.com/en/1.1.0/)  
-and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
----
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.0.0] – 2025-11-16
 
@@ -25,17 +22,5 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - **Complete folder structure refactor** (`src/html`, `src/js`, `src/icons`).
 - CSP-compliant script loading (removed inline scripts).
 - Added footer with links to GitHub, Buy Me a Coffee, and Night Owl Labs.
-
----
-
-## [Unreleased]
-
-### Planned
-- Support for per-site routing rules.
-- Disable anchor for specific domains or windows.
-- Customizable overlay duration and styling.
-- Multi-anchor mode for advanced workflows.
-
----
 
 [1.0.0]: https://github.com/Night-Owl-Labs/Tab-Anchor/releases/tag/v1.0.0
