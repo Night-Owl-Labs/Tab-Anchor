@@ -7,13 +7,9 @@ This project owes its success to the following people and organizations:
 - **[Scott Grivner](https://github.com/scottgriv)**: For creating the initial product and release.
 - **[Anya Enko](https://github.com/AnyaEnko)**: For assisting in the creation of the graphic designs for the application and feedback for the overall product.
 
-## Third-party Libraries
-
-- [SoX (Sound eXchange)](https://sourceforge.net/projects/sox/): SoX is the Swiss Army Knife of sound processing utilities. It can convert audio files to other popular audio file types and also apply sound effects and filters during the conversion.
-
 ## Special Thanks
 
-- **The Open Source Community**: for inspiring me to make this application and the abundant resources I used to craft many of my guidelines.
+- **My Brother-In-Law**: for coming to me with the problem him and his team were having, which led to the development of this application.
 
 ## License
 
